@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">N Clock</h1>
+    <div id="display" class="clock">00:00:00</div>
+
+    <div class="tabs">
+      <button id="tabClock" class="active">時計</button>
+      <button id="tabAlarm">アラーム</button>
+      <button id="tabSettings">設定</button>
+    </div>
+
+    <div id="contentClock" class="content active">
+      <div class="slider-group">
+        <label for="sliderHours">1日の長さ: <span id="labelHours">24 時間</span></label>
+        <input type="range" id="sliderHours" min="12" max="48" step="1" value="24">
+      </div>
+    </div>
+
+    <div id="contentAlarm" class="content">
+      <div class="alarm-list"></div>
+      <button id="addAlarm" class="add-btn">＋ アラーム追加</button>
+    </div>
+
+    <div id="contentSettings" class="content">
+      <label class="switch-label">
+        <span>秒数を表示</span>
+        <label class="switch">
+          <input type="checkbox" id="toggleSeconds" checked>
+          <span class="slider round"></span>
+        </label>
+      </label>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
